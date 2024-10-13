@@ -1,0 +1,523 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex; /* Sắp xếp các phần tử con theo chiều ngang */
+    justify-content: space-between; /* Giữa khoảng cách giữa logo và các liên kết */
+    align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+    padding: 10px 20px;
+    border-bottom: 3px solid #66c7e5; /* Đường viền dưới cùng */
+}
+
+.header_name {
+    display: flex; /* Sắp xếp logo và phần văn bản theo hàng ngang */
+    align-items: center; /* Căn giữa logo và văn bản theo chiều dọc */
+}
+
+.logo {
+    width: 80px; /* Kích thước logo */
+    margin-right: 15px; /* Khoảng cách giữa logo và văn bản */
+}
+
+.header_name span {
+    font-family: Arial, sans-serif; /* Kiểu chữ của phần tiêu đề */
+    font-size: 24px;
+    font-weight: bold; /* Làm đậm chữ */
+    color: #66c7e5; /* Màu xanh cho phần chữ */
+}
+
+nav {
+    display: flex; /* Sắp xếp các liên kết điều hướng theo hàng ngang */
+    gap: 20px; /* Khoảng cách giữa các liên kết */
+}
+
+nav a {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Kích thước chữ */
+    color: black; /* Màu chữ đen */
+    text-decoration: none; /* Bỏ gạch chân mặc định của liên kết */
+    font-weight: bold; /* Làm đậm chữ của các liên kết */
+}
+
+nav a:hover {
+    color: #66c7e5; /* Màu khi di chuột qua liên kết */
+}
+
+
+
+/* Navigation */
+nav {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các liên kết nằm ngang */
+    justify-content: center; /* Căn giữa các liên kết */
+    align-items: center; /* Căn giữa các liên kết theo chiều dọc */
+    gap: 7px; /* Khoảng cách giữa các liên kết */
+    padding: 10px; /* Thêm khoảng cách bên trong nav nếu cần */
+}
+nav a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex; /* Sử dụng Flexbox để sắp xếp các liên kết ngang */
+    gap: 7px; /* Khoảng cách giữa các liên kết */
+    padding: 10px 15px; /* Thêm khoảng cách xung quanh liên kết */
+    border-radius: 5px; /* Bo tròn các góc */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+}
+/* Hiệu ứng khi di chuột qua */
+nav a:hover {
+    background-color: #79d0f3; /* Màu nền khi di chuột qua */
+    color: white; /* Màu chữ khi di chuột qua */
+}
+/* Hiệu ứng khi liên kết đang được chọn hoặc hoạt động */
+nav a.active {
+    background-color: #333; /* Màu nền khi liên kết đang được chọn */
+    color: white; /* Màu chữ khi liên kết đang được chọn */
+}
+/* Phần tử phân cách */
+.separator {
+    height: 10px; /* Chiều cao của phần tử phân cách */
+    background-color: #ffffff; /* Màu nền của phần tử phân cách */
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------- */
+
+/* App content */
+
+.app_content {
+    padding: 16px 32px; /*Khoảng cách toàn bộ app*/
+}
+
+
+
+
+/* Content*/
+.content {
+    margin-top: 16px; /* Khoảng cách phía trên */
+}
+
+.content-thanhtoan {
+    margin: 32px 0;  /* Khoảng cách bên ngoài của phần tử */
+    display: flex; /* Bố cục các phần tử con theo chiều ngang */
+    height: 100%; /* Chiều dọc của phần tử */
+    font-size: 24px; /* Kích thước của phần tử */
+    align-items: center;
+    
+}
+
+.content-thanhtoan-layout-img {
+    width: 40%;
+    text-align: center;
+    font-size: 48px;
+}
+
+.content-thanhtoan-layout-img-detail {
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+}
+
+.content-thanhtoan-info {
+    width: 50%; /* Hoặc chiều rộng bạn muốn */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px; /* Kích thước của phần tử */
+
+}
+
+.content-thanhtoan-info-size {
+    flex: 2; /* Để chúng chiếm không gian đều */
+    display: flex; /* Sử dụng Flexbox cho bố trí bên trong */
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    font-size: 48px; /* Kích thước chữ lớn hơn */
+    white-space: nowrap; /* Ngăn không cho nội dung bị xuống dòng */
+
+}
+
+.content-thanhtoan-info-size {
+    display: grid; /*Hiển thị theo dạng khối trong phần tử*/
+    align-items: end; /*Nội dung nằm bên phải*/
+    height: 80%; /* Chiều dọc của phần tử */
+    font-size: 48px;
+}
+
+.content-thanhtoan-2 {
+    margin: 32px 0;  /* Khoảng cách bên ngoài của phần tử */
+    display: flex; /* Bố cục các phần tử con theo chiều ngang */
+    height: 100%; /* Chiều dọc của phần tử */
+    font-size: 24px; /* Kích thước của phần tử */
+}
+
+.name {
+    font-weight: bold; /* In đậm */
+    width: 40%; /* Chiều ngang của phần tử */
+    text-align: center; /*Nội dung được căn giữa*/
+    font-size: 48px;
+}
+
+.tongthanhtoan {
+    width: 30%; /* Chiều ngang của phần tử */
+    font-size: 48px;
+}
+
+.tongthanhtoan-tien {
+    font-size: 48px;
+}
+/* CSS cho giỏ hàng */
+#cartItems {
+    display: flex; /* Sử dụng Flexbox cho giỏ hàng */
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    gap: 0px; /* Khoảng cách giữa các sản phẩm */
+}
+
+.content-thanhtoan {
+    display: flex; /* Bố trí các phần tử con theo chiều ngang trong mỗi sản phẩm */
+    align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+
+    padding: 10px; /* Thêm khoảng đệm bên trong */
+    border-radius: 5px; /* Bo tròn góc */
+    background-color: #ffffff; /* Màu nền cho sản phẩm */
+}
+
+.ghichu {
+    width: 40%; /* Chiều ngang của phần tử */
+    text-align: center; /*Nội dung được căn giữa*/
+    font-size: 48px;
+}
+
+/* Định dạng chung cho các ô nhập liệu bao gồm: Họ và tên, Số điện thoại, Địa chỉ và Ghi chú */
+.textarea-ghichu {
+    width: 100%;           /* Đặt chiều rộng của ô nhập liệu bằng 100% chiều rộng của phần tử chứa nó */
+    padding: 10px;          /* Thêm khoảng đệm bên trong ô nhập liệu để tạo khoảng cách giữa nội dung và đường viền */
+    margin-top: 10px;       /* Tạo khoảng cách phía trên mỗi ô nhập liệu */
+    margin-bottom: 10px;    /* Tạo khoảng cách phía dưới mỗi ô nhập liệu */
+    box-sizing: border-box; /* Đảm bảo rằng padding và border không làm tăng thêm kích thước tổng thể của ô nhập liệu */
+    font-size: 16px;        /* Đặt kích thước phông chữ cho nội dung bên trong ô nhập liệu */
+    border: 5px solid #64CBEF; /*Màu đường viền phần tử*/
+}
+
+
+
+.btn-action {
+    display: flex; /* Bố cục các phần tử con theo chiều ngang */
+    margin: 16px; /* Khoảng cách bên ngoài của phần tử */
+    padding: 8px; /* Khoảng cách bên trong của phần tử */
+}
+
+.btn-huy-action {
+    width: 50%; /* Chiều ngang của phần tử */
+    height: 70px; /* Chiều dọc của phần tử */
+    font-size: 32px; /* Kích thước của phần tử */
+    background-color: #FBFCFC; /* Màu nền của phần tử */
+    color: #64CBEF; /* Màu chữ */
+    font-weight: bold; /* In đậm */
+    border: none; /*Loại bỏ đường viền*/
+    margin: 20px; /* Khoảng cách bên ngoài của phần tử */
+    cursor: pointer;
+}
+
+.btn-dathang-action {
+    width: 50%; /* Chiều ngang của phần tử */
+    height: 70px; /* Chiều dọc của phần tử */
+    font-size: 32px; /* Kích thước của phần tử */
+    background-color: #64CBEF; /* Màu nền của phần tử */
+    color: white; /* Màu chữ */
+    font-weight: bold; /* In đậm */
+    border: none; /*Loại bỏ đường viền*/
+    border-radius: 10px;
+    margin: 20px; /* Khoảng cách bên ngoài của phần tử */
+    cursor: pointer;
+}
+/* Hiệu ứng chung cho nút */
+button {
+    background-color: #64cbef; /* Màu nền ban đầu */
+    color: white; /* Màu chữ */
+    font-size: 16px; /* Kích thước chữ */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    border: none; /* Loại bỏ đường viền */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+/* Hiệu ứng khi hover */
+button:hover {
+    background-color: #27667b; /* Thay đổi màu nền khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ */
+    color: white; /* Màu chữ */
+}
+
+/* Hiệu ứng khi click */
+button:active {
+    background-color: #3AA2C8; /* Thay đổi màu nền khi click */
+    transform: scale(0.98); /* Giảm kích thước nhẹ để tạo cảm giác click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Giảm bóng đổ */
+} 
+
+
+/* Nút vô hiệu hóa */
+button:disabled {
+    background-color: #ffffff; /* Màu nền cho nút bị vô hiệu */
+    cursor: not-allowed; /* Con trỏ chuột không cho phép */
+
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* Footer */
+
+.footer {
+    padding: 16px 32px; /*Khoảng cách toàn bộ app*/
+    position: relative; /* Bố cục đặt vị trí mặc định */
+    margin-top: 10px; /* Khoảng cách phía trên của phần tử */
+}
+
+.footer_info {
+    display: flex;  /* Bố cục các phần tử con theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between;  /* Làm cho nội dung của phần tử con cách đều hai bên ngoài lề */
+    margin: 32px;  /* Khoảng cách bên ngoài của phần tử */
+}
+
+
+.footer_info_detail {
+    font-weight: bold; /* In đậm */
+    font-size: 24px;  /* Kích thước của phần tử */
+    width: 33.334%;  /* Chiều ngang của phần tử */
+    text-align: left; /*Nội dung nằm bên trái*/
+}
+
+.footer_info_detail-2 {
+    font-size: 24px; /* Kích thước của phần tử */
+    width: 33.334%; /* Chiều ngang của phần tử */
+    text-align: left; /*Nội dung nằm bên trái*/
+}
+
+.footer_info_detail-2-a {
+    font-size: 24px; /* Kích thước của phần tử */
+    width: 33.334%; /* Chiều ngang của phần tử */
+    text-align: left; /* Nội dung nằm bên trái */
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    color: black; /* Màu chữ */
+}
+
+.footer_info_detail-img-detail {
+    width: 70px; /* Chiều ngang của phần tử */
+    height: 70px; /* Chiều dọc của phần tử */
+    margin-right: 20px; /* Khoảng cách bên phải của phần tử */
+}
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h4 {
+
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-column p, .footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column ul li {
+    padding: 5px 0;
+}
+
+.social-icons img {
+    width: 40px;
+    margin-right: 10px;
+    margin-top: 20px; /* Khoảng cách giữa các thẻ p và các biểu tượng xã hội */
+}
+
+/* Thiết kế cho chế độ dọc (Portrait) */
+@media screen and (orientation: portrait) {
+    .header-content {
+        text-align: center;
+    }
+
+    .header-content input[type="text"] {
+        width: 90%;
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .products {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 sản phẩm mỗi hàng trong chế độ dọc */
+        gap: 20px;
+    }
+
+    .product-item {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Cập nhật phần content */
+    .app_content {
+        padding: 16px;
+    }
+
+    .title {
+        margin-top: 20px;
+        border-bottom: 3px solid #64CBEF;
+        text-align: center;
+    }
+
+    .title_name {
+        color: #64CBEF;
+        font-weight: bold;
+        font-size: 48px; /* Kích thước tên header nhỏ hơn để phù hợp với màn hình dọc */
+    }
+
+    /* Nội dung chính */
+    .content {
+        margin-top: 16px;
+    }
+
+    .content-thanhtoan, .content-thanhtoan-2 {
+        margin: 16px 0; 
+        display: flex;
+        flex-direction: column; /* Chia theo cột cho giao diện dọc */
+        align-items: center;
+        font-size: 18px; /* Kích thước chữ nhỏ hơn để phù hợp với màn hình dọc */
+    }
+    /* CSS cho giỏ hàng */
+#cartItems {
+    display: flex; /* Sử dụng Flexbox cho giỏ hàng */
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    gap: 0px; /* Khoảng cách giữa các sản phẩm */
+}
+
+.content-thanhtoan {
+    display: flex; /* Bố trí các phần tử con theo chiều ngang trong mỗi sản phẩm */
+    align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+
+    padding: 10px; /* Thêm khoảng đệm bên trong */
+    border-radius: 5px; /* Bo tròn góc */
+    background-color: #ffffff; /* Màu nền cho sản phẩm */
+}
+    .content-thanhtoan-layout-img, .content-thanhtoan-info, .content-thanhtoan-info-size {
+        width: 100%; /* Đảm bảo các phần tử chiếm toàn bộ chiều rộng */
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .content-thanhtoan-layout-img-detail {
+        width: 80%; /* Giảm kích thước hình ảnh để vừa với màn hình dọc */
+        height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+    }
+
+    .content-thanhtoan-info, .content-thanhtoan-info-size {
+        font-size: 18px; /* Kích thước chữ nhỏ hơn cho giao diện dọc */
+    }
+
+    .name, .tongthanhtoan, .ghichu {
+        font-size: 24px; /* Kích thước chữ nhỏ hơn */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        text-align: center; /* Căn giữa chữ */
+    }
+
+    .textarea-ghichu {
+        width: 80%; /* Giảm chiều rộng để phù hợp với màn hình dọc */
+        margin-left: 0; /* Loại bỏ khoảng cách bên trái */
+        text-align: start;
+        resize: none;
+        border-radius: 5px;
+        border: 3px solid #64CBEF;
+        outline: none;
+        font-size: 24px;
+        height: 200px; /* Giảm chiều cao để vừa với màn hình dọc */
+    }
+
+    .btn-action {
+        flex-direction: column; /* Xếp các nút theo cột trong chế độ dọc */
+    }
+
+    .btn-huy-action, .btn-dathang-action {
+        width: 80%; /* Chiều rộng nút nhỏ hơn */
+        height: 50px; /* Chiều cao nút nhỏ hơn */
+        font-size: 18px; /* Kích thước chữ nhỏ hơn */
+    }
+}
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Chuyển sang hiển thị cột */
+        text-align: center; /* Căn giữa các phần tử */
+    }
+
+    nav {
+        flex-direction: column; /* Các liên kết điều hướng được xếp thành cột */
+        gap: 10px; /* Tăng khoảng cách giữa các liên kết */
+    }
+
+    .content {
+        padding: 10px; /* Giảm khoảng cách padding khi màn hình nhỏ */
+    }
+
+    .content-thanhtoan, .content-thanhtoan-2 {
+        flex-direction: row; /* Bố trí theo cột để phù hợp với màn hình hẹp */
+    }
+
+    .textarea-ghichu {
+        width: 90%; /* Giảm chiều rộng của ô nhập liệu cho phù hợp */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 60px; /* Giảm kích thước logo */
+    }
+
+    .header_name span {
+        font-size: 20px; /* Giảm kích thước chữ cho header */
+    }
+
+    .btn-huy-action, .btn-dathang-action {
+        width: 100%; /* Các nút chiếm toàn bộ chiều rộng */
+        height: 50px; /* Giảm chiều cao nút */
+    }
+
+    .footer {
+        flex-direction: column; /* Chuyển footer thành cột */
+        text-align: center;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/qldh.css">
+    <link rel="stylesheet" href="../css/logout.css">
+    <!-- Thêm favicon vào tab trình duyệt -->
+    <link rel="icon" href="../images/favicon.png" type="image/png"> <!-- Đường dẫn đến favicon -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <img src="../images/phone-icon.png" alt="Phone Icon" class="phone-icon">
+                <span>0923456789</span>
+            </div>
+            <nav>
+                <a href="../html/home_admin.html">TRANG CHỦ</a>
+                <!-- <a href="../html/giohang.html">QUẢN LÝ SẢN PHẨM</a> -->
+                <a href="../html/dsdh.html">DANH SÁCH ĐƠN HÀNG</a>
+                <a href="#" id="logout">ĐĂNG XUẤT</a>
+            </nav>
+        </div>
+        <div class="separator"></div> <!-- Phần tử phân cách -->
+        <div class="header-title">
+            <img src="../images/logo-store2.png" alt="Logo" class="logo">
+            <h1>DuDu Store</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm" class="search-box">
+        </div>
+    </header>
+    <!-- Content -->
+    <div class="app_content">
+        <div class="title">
+            <span class="title_name">Thông tin đơn hàng</span>
+        </div>
+        <div class="content">
+            <div class="madh-info">
+                <span class="madh-info-name">DH001</span>
+                <span class="madh-info-name"></span>
+            </div>
+            <div class="madh-info">
+                <span class="madh-info-name-2">Tên sản phẩm:</span>
+                <span class="madh-info-name-2-detail">Chó Shiba</span>
+            </div>
+            <div class="madh-info">
+                <span class="madh-info-name-2">Số lượng:</span>
+                <span class="madh-info-name-2-detail">2</span>
+            </div>
+            <div class="madh-info">
+                <span class="madh-info-name-2">Giá bán:</span>
+                <span class="madh-info-name-2-detail">131.000</span>
+            </div>
+            <div class="madh-info">
+                <span class="madh-info-name-2">Tổng thanh toán:</span>
+                <span class="madh-info-name-2-detail">262.000đ</span>
+            </div>
+            <div class="madh-info">
+                <span class="madh-info-name-2">Số điện thoại KH:</span>
+                <span class="madh-info-name-2-detail">0796181818</span>
+            </div>
+            <div class="madh-info">
+                <span class="madh-info-name-2">Trạng thái đơn hàng:</span>
+                <span class="madh-info-name-2-detail">Đang giao</span>
+            </div>
+            <div class="madh-info">
+                <span class="madh-info-name-2">Địa chỉ:</span>
+                <span class="madh-info-name-2-detail">256 Nguyễn Văn Cừ, An Hòa, Ninh Kiều, Cần Thơ</span>
+            </div>
+            <div class="madh-info">
+                <span class="madh-info-name-2">Ghi chú:</span>
+                <span class="madh-info-name-2-detail">Sốp gói đẹp cho em nha</span>
+            </div>
+            <div class="madh-info madh-info-btn">
+                <button class="btn-huy">HỦY</button>
+                <button class="btn-capnhat">CẬP NHẬT</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h4>LIÊN HỆ</h4>
+            <p>Số điện thoại: 0923456789</p>
+            <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hòa, Q.Ninh Kiều, TP Cần Thơ</p> 
+            <div class="social-icons">
+                <img src="../images/zalo-icon.png" alt="Zalo">
+                <img src="../images/facebook-icon.png" alt="Facebook">
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+            <ul>
+                <li>Hướng dẫn mua hàng</li>
+                <li>Chính sách đổi trả</li>
+                <li>Cách chúng tôi gửi bé yêu đến bạn</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>DUDU STORE</h4>
+            <ul>
+                <li>Về chúng tôi</li>
+                <li>Bảng giá</li>
+                <li>Thông tin sản phẩm</li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Modal Xác Nhận Đăng Xuất -->
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <h2>Đăng xuất</h2>
+        <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+        <div class="modal-buttons">
+            <button id="confirmLogout" class="modal-button">Đăng Xuất</button>
+            <button id="cancelLogout" class="modal-button">Hủy</button>
+        </div>
+    </div>
+</div>
+<script src="../js/logout.js"></script> <!-- Thêm link tới file JavaScript đăng xuất -->
+</body>
+</html>

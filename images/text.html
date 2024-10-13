@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuDu Store</title>
+    <link rel="stylesheet" href="../css/text.css"> <!-- Liên kết đến file CSS -->
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <img src="phone-icon.png" alt="Phone Icon">
+                <span>0923456789</span>
+            </div>
+            <nav>
+                <a href="#">TRANG CHỦ</a>
+                <a href="#">ĐẶT HÀNG</a>
+                <a href="#">ĐĂNG NHẬP</a>
+                <a href="#">ĐĂNG KÝ</a>
+            </nav>
+        </div>
+        <div class="header-title">
+            <h1>DuDu Store</h1>
+        </div> 
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm" class="search-box">
+        </div>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>Danh mục sản phẩm</h2>
+            <ul>
+                <li>Mèo Dudu</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+            </ul>
+        </div>
+        <div class="products">
+            <h3>Hiển thị kết quả:</h3>
+            <div class="sort-filter">
+                <select>
+                    <option value="asc">Lọc theo giá: từ thấp đến cao</option>
+                    <option value="desc">Lọc theo giá: từ cao đến thấp</option>
+                </select>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <?php include 'fetch_products.php'; ?> <!-- Liên kết đến file PHP -->
+            </div>
+            <div class="pagination" id="pagination">
+                <?php include 'pagination.php'; ?> <!-- Liên kết đến file PHP -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-column">
+            <h4>LIÊN HỆ</h4>
+            <p>Số điện thoại: 0923456789</p>
+            <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hòa, Q.Ninh Kiều, TP Cần Thơ</p> 
+            <div class="social-icons">
+                <img src="zalo-icon.png" alt="Zalo">
+                <img src="facebook-icon.png" alt="Facebook">
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+            <ul>
+                <li>Hướng dẫn mua hàng</li>
+                <li>Chính sách đổi trả</li>
+                <li>Cách chúng tôi gửi bé yêu đến bạn</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>DUDU STORE</h4>
+            <ul>
+                <li>Về chúng tôi</li>
+                <li>Bảng giá</li>
+                <li>Thông tin sản phẩm</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

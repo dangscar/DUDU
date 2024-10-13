@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuDu Store</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <img src="phone-icon.png" alt="Phone Icon">
+                <span>0923456789</span>
+            </div>
+            <nav>
+                <a href="#">TRANG CHỦ</a>
+                <a href="#">ĐẶT HÀNG</a>
+                <a href="#">ĐĂNG NHẬP</a>
+                <a href="#">ĐĂNG KÝ</a>
+            </nav>
+        </div>
+        <div class="header-title">
+            <h1>DuDu Store</h1>
+        </div> 
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm" class="search-box">
+        </div>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>Danh mục sản phẩm</h2>
+            <ul>
+                <li>Mèo Dudu</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+            </ul>
+        </div>
+        <div class="products">
+            <h3>Hiển thị kết quả:</h3>
+            <div class="sort-filter">
+                <select>
+                    <option value="asc">Lọc theo giá: từ thấp đến cao</option>
+                    <option value="desc">Lọc theo giá: từ cao đến thấp</option>
+                </select>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <div class="product-item">
+                    <img src="cho-shiba.png" alt="Chó Shiba">
+                    <p>Chó Shiba</p>
+                    <span>131.000</span>
+                    <button>add</button>
+                </div>
+                <div class="product-item">
+                    <img src="gau-miniso.jpg" alt="Gấu Miniso">
+                    <p>Gấu Miniso</p>
+                    <span>250.000</span>
+                    <button>add</button>
+                </div>
+                <div class="product-item">
+                    <img src="tho-animo.png" alt="Thỏ Animo">
+                    <p>Thỏ Animo</p>
+                    <span>122.000</span>
+                    <button>add</button>
+                </div>
+                <div class="product-item">
+                    <img src="meo-dudu.png" alt="Mèo DuDu">
+                    <p>Mèo DuDu</p>
+                    <span>249.000</span>
+                    <button>add</button>
+                </div>
+                <div class="product-item">
+                    <img src="vit-capcap.png" alt="Vịt cạp cạp">
+                    <p>Vịt cạp cạp</p>
+                    <span>209.000</span>
+                    <button>add</button>
+                </div>
+            </div>
+            <div class="pagination" id="paginationContainer">
+                <!-- Phân trang sẽ được tạo tự động -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-column">
+            <h4>LIÊN HỆ</h4>
+            <p>Số điện thoại: 0923456789</p>
+            <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hòa, Q.Ninh Kiều, TP Cần Thơ</p> 
+            <div class="social-icons">
+                <img src="zalo-icon.png" alt="Zalo">
+                <img src="facebook-icon.png" alt="Facebook">
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+            <ul>
+                <li>Hướng dẫn mua hàng</li>
+                <li>Chính sách đổi trả</li>
+                <li>Cách chúng tôi gửi bé yêu đến bạn</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>DUDU STORE</h4>
+            <ul>
+                <li>Về chúng tôi</li>
+                <li>Bảng giá</li>
+                <li>Thông tin sản phẩm</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const itemsPerPage = 4; // Số sản phẩm trên mỗi trang
+            const products = document.querySelectorAll('.product-item'); // Lấy tất cả sản phẩm
+            const paginationContainer = document.getElementById('paginationContainer');
+            const totalPages = Math.ceil(products.length / itemsPerPage); // Tính tổng số trang
+
+            // Hiển thị trang hiện tại
+            function showPage(page) {
+                products.forEach((product, index) => {
+                    product.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? 'block' : 'none';
+                });
+            }
+
+            // Tạo các liên kết phân trang
+            function createPagination() {
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageLink = document.createElement('a');
+                    pageLink.innerText = i;
+                    pageLink.href = "#";
+                    pageLink.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        showPage(i);
+                        document.querySelector('.pagination a.active')?.classList.remove('active');
+                        pageLink.classList.add('active');
+                    });
+                    paginationContainer.appendChild(pageLink);
+                }
+                // Đặt trang đầu tiên là trang active
+                paginationContainer.firstElementChild.classList.add('active');
+            }
+
+            // Khởi tạo phân trang
+            showPage(1); // Hiển thị trang đầu tiên
+            createPagination(); // Tạo các nút phân trang
+        });
+    </script>
+</body>
+</html>

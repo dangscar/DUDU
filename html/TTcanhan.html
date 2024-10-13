@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuDu Store | THÔNG TIN CÁ NHÂN</title>
+    <!-- Link tới file CSS chính -->
+    <link rel="stylesheet" href="../css/TTcnhan.css">
+    <!-- Link đến CSS cho modal logout -->
+    <link rel="stylesheet" href="../css/logout.css">
+    <!-- Thêm favicon vào tab trình duyệt -->
+    <link rel="icon" href="../images/favicon.png" type="image/png"> <!-- Đường dẫn đến favicon -->
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="top-bar">
+                <div class="contact-info">
+                    <img src="../images/phone-icon.png" alt="Phone Icon" class="phone-icon"><!--icon phone-->
+                    <span>0923456789</span>
+                </div>
+                <nav>
+                    <a href="../html/home_customer.html">TRANG CHỦ</a>
+                    <a href="../html/xemlichsudh.html">ĐƠN MUA</a>
+                    <a href="../html/cart.html">GIỎ HÀNG</a>
+                    <a href="#" id="logout">ĐĂNG XUẤT</a>
+                </nav>
+            </div>
+            <div class="separator"></div> <!-- Phần tử phân cách -->
+            <div class="header-title">
+                <img src="../images/logo-store2.png" alt="Logo" class="logo">
+                <h1>DuDu Store</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Tìm kiếm" class="search-box">
+            </div>
+        </header>
+
+        <div class="product-info">
+            <div class="product-details">
+                <h2>THÔNG TIN CÁ NHÂN</h2>
+
+                <p><strong>Họ và tên:</strong> <span id="name-text">Nguyễn Văn A</span>
+                    <a href="#" class="edit-link" onclick="editField('name-text', 'name-input')">Thay đổi</a>
+                    <input type="text" id="name-input" style="display:none;" value="Nguyễn Văn A" onblur="saveField('name-text', 'name-input')">
+                </p>
+
+                <p><strong>Số điện thoại:</strong> <span id="phone-text">0943846522</span>
+                    <a href="#" class="edit-link" onclick="editField('phone-text', 'phone-input')">Thay đổi</a>
+                    <input type="text" id="phone-input" style="display:none;" value="0943846522" onblur="saveField('phone-text', 'phone-input')">
+                </p>
+
+                <p><strong>Địa chỉ:</strong> <span id="address-text">Đường xyz, P An Khánh, Q Ninh Kiều, Cần Thơ</span>
+                    <a href="#" class="edit-link" onclick="editField('address-text', 'address-input')">Thay đổi</a>
+                    <input type="text" id="address-input" style="display:none;" value="Đường xyz, P An Khánh, Q Ninh Kiều, Cần Thơ" onblur="saveField('address-text', 'address-input')">
+                </p>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="cancel-btn">HỦY</button>
+            <button class="save-btn">LƯU THAY ĐỔI</button>
+        </div>
+        
+        <footer>
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>Số điện thoại: 0923456789</p>
+                <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hoà, Q.Ninh Kiều, TP Cần Thơ</p>
+                <div class="social-media">
+                    <img src="../images/zalo-icon.png" alt="Zalo">
+                    <img src="../images/facebook-icon.png" alt="Facebook">
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Hỗ Trợ Khách Hàng</h3>
+                <p>Hướng dẫn mua hàng</p>
+                <p>Chính sách đổi trả</p>
+                <p>Cách chúng tôi gửi bé yêu đến bạn</p>
+            </div>
+            <div class="footer-section">
+                <h3>DuDu Store</h3>
+                <p>Về chúng tôi</p>
+                <p>Bảng giá</p>
+                <p>Thông tin sản phẩm</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal Xác Nhận Đăng Xuất -->
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <h2>Đăng xuất</h2>
+            <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+            <div class="modal-buttons">
+                <button id="confirmLogout" class="modal-button">Đăng Xuất</button>
+                <button id="cancelLogout" class="modal-button">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link tới file JavaScript -->
+    <script src="../js/TTcanhan.js"></script> <!-- Link tới file JavaScript quản lý thông tin cá nhân -->
+    <script src="../js/logout.js"></script> <!-- Link tới file JavaScript đăng xuất -->
+</body>
+
+</html>

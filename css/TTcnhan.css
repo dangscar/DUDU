@@ -1,0 +1,216 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+header {
+    background-image: url('../images/bluebg.png'); /* Đường dẫn tới hình nền */
+    background-size: cover; /* Đảm bảo hình nền bao phủ toàn bộ khu vực header */
+    background-position: center; /* Căn giữa hình nền */
+    color: white; /* Màu chữ trắng để hiển thị rõ trên hình nền */
+    padding: 0 0 20px 0; /* Padding chỉ ở dưới cùng để header có không gian hơn */
+    background-color: #87ceeb; /* Màu nền bổ sung là màu xanh dương nhạt */
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử bên trong header */
+    flex-direction: column; /* Sắp xếp các phần tử bên trong header theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.top-bar {
+    width: 100%; /* Chiếm toàn bộ chiều ngang của phần tử chứa */
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử bên trong top-bar */
+    justify-content: space-between; /* Phân bố đều các phần tử, với khoảng cách lớn nhất giữa chúng */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px 20px; /* Thêm khoảng cách 20px ở trái và phải */
+    background-color: rgb(255, 255, 255); /* Nền trắng mờ cho top-bar */
+    box-sizing: border-box; /* Tính toán kích thước bao gồm padding và border */
+    /*border-bottom: 3px solid #0cc0df; /* Đường viền dưới top-bar */
+    margin-bottom: 60px; /* Khoảng cách giữa top-bar và tiêu đề */
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử bên trong contact-info */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px; /* Thêm khoảng cách bên trong là 10px */
+    border: 2px solid #cccccc; /* Thêm đường viền dày 2px màu xám nhạt */
+    border-radius: 50px; /* Bo tròn các góc với bán kính 50px */
+    background-color: #ffffff; /* Màu nền của thẻ là màu trắng */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho thẻ để tạo chiều sâu */
+    width: 180px; /* Đặt chiều rộng cố định là 180px */
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng của phần tử chứa */
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+}
+
+
+.contact-info img {
+    width: 24px; /* Đặt chiều rộng hình ảnh là 24px */
+    margin-right: 10px; /* Thêm khoảng cách 10px bên phải hình ảnh */
+}
+
+.contact-info span {
+    font-size: 16px; /* Thay đổi kích thước văn bản nếu cần */
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các liên kết nằm ngang */
+    justify-content: center; /* Căn giữa các liên kết */
+    align-items: center; /* Căn giữa các liên kết theo chiều dọc */
+    gap: 7px; /* Khoảng cách giữa các liên kết */
+    padding: 10px; /* Thêm khoảng cách bên trong nav nếu cần */
+}
+nav a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex; /* Sử dụng Flexbox để sắp xếp các liên kết ngang */
+    gap: 7px; /* Khoảng cách giữa các liên kết */
+    padding: 10px 15px; /* Thêm khoảng cách xung quanh liên kết */
+    border-radius: 5px; /* Bo tròn các góc */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+}
+/* Hiệu ứng khi di chuột qua */
+nav a:hover {
+    background-color: #79d0f3; /* Màu nền khi di chuột qua */
+    color: white; /* Màu chữ khi di chuột qua */
+}
+/* Hiệu ứng khi liên kết đang được chọn hoặc hoạt động */
+nav a.active {
+    background-color: #333; /* Màu nền khi liên kết đang được chọn */
+    color: white; /* Màu chữ khi liên kết đang được chọn */
+}
+/* Phần tử phân cách */
+.separator {
+    height: 10px; /* Chiều cao của phần tử phân cách */
+    background-color: #ffffff; /* Màu nền của phần tử phân cách */
+}
+
+/* Header title */
+.header-title {
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    text-align: center; /* Căn giữa văn bản */
+    padding: 5px 0; /* Padding trên và dưới */
+}
+
+.header-title .logo {
+    width: 50%; /* Kích thước logo */
+    margin-right: 5px; /* Khoảng cách giữa logo và tiêu đề */
+    height: auto; /* Tỷ lệ hình ảnh */
+    margin-bottom: 0; /* Giảm khoảng cách phía dưới logo */
+    max-width: 100%; /* Đảm bảo kích thước không vượt quá phần tử chứa */
+}
+
+.header-title h1 {
+    margin-top: 5px; /* Tạo một khoảng cách nhỏ nếu cần giữa logo và tiêu đề */
+    font-size: 5.5rem; /* Kích thước chữ tiêu đề */
+    color: white; /* Màu chữ */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Bóng chữ */
+}
+
+/* Thanh tìm kiếm */
+.search-container {
+    text-align: center; /* Căn giữa thanh tìm kiếm */
+    padding: 10px 0;
+}
+
+.search-box {
+    padding: 10px;
+    width: 500px; /* Điều chỉnh chiều dài của thanh tìm kiếm chiếm toàn bộ chiều rộng của phần tử chứa */
+    max-width: 100%; /* Chiều dài tối đa của thanh tìm kiếm */
+    border-radius: 25px;
+    border: 2px solid #cccccc; /* Thay đổi màu viền để rõ ràng hơn */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    box-sizing: border-box; /* Đảm bảo padding và border không làm phần tử vượt ra ngoài kích thước */
+}
+/* Phần quản lý sản phẩm */
+.product-management {
+    background-color: white; /* Màu nền trắng cho khối sản phẩm */
+    padding: 20px; /* Thêm khoảng cách trong */
+    border-radius: 8px; /* Bo tròn góc cho khối sản phẩm */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho khối sản phẩm */
+    margin-bottom: 20px; /* Thêm khoảng cách dưới khối sản phẩm */
+}
+
+.product-info {
+    display: flex; /* Căn theo hàng ngang các phần thông tin sản phẩm */
+    justify-content: space-between; /* Đẩy các phần tử ra hai bên của khối */
+}
+
+.edit-link {
+    margin-left: 10px; /* Khoảng cách giữa chữ "Thay đổi" và thông tin */
+    font-size: 14px;
+    color: #64CBEF; /* Màu sắc cho chữ "Thay đổi" */
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.edit-link:hover {
+    color: #0056b3; /* Màu khi di chuột qua */
+}
+
+.product-details h2 {
+    font-size: 2.5rem; /* Kích thước chữ lớn cho tên sản phẩm */
+    margin-bottom: 10px; /* Thêm khoảng cách dưới tên sản phẩm */
+}
+
+.product-details p {
+    font-size: 1.7rem; /* Kích thước chữ cho mô tả sản phẩm */
+    margin-bottom: 15px; /* Thêm khoảng cách dưới từng đoạn mô tả */
+}
+/* Định dạng cho phần chân trang */
+footer {
+    display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử theo chiều ngang */
+    justify-content: space-between; /* Tạo khoảng cách giữa các phần tử trong footer */
+    margin-top: 20px; /* Thêm khoảng cách trên cùng của footer */
+    padding: 20px; /* Thêm khoảng cách bên trong footer */
+    background-color: #f5f5f5; /* Màu nền xám nhạt cho footer */
+    border-top: 1px solid #ddd; /* Đường viền trên màu xám nhạt */
+}
+
+/* Định dạng cho các phần trong footer */
+.footer-section {
+    width: 30%; /* Đặt chiều rộng cho mỗi phần trong footer */
+}
+
+/* Định dạng cho tiêu đề trong footer */
+.footer-section h3 {
+    margin-bottom: 10px; /* Thêm khoảng cách bên dưới tiêu đề */
+}
+
+/* Định dạng cho biểu tượng mạng xã hội */
+.social-media img {
+    width: 40px; /* Kích thước biểu tượng */
+    margin-right: 10px; /* Thêm khoảng cách giữa các biểu tượng */
+}
+/* Phần chứa các nút hành động */
+.action-buttons {
+    text-align: center; /* Căn giữa các nút */
+}
+/* Định dạng chung cho các nút hành động */
+.action-buttons button {
+    
+    padding: 10px 20px; /* Thêm khoảng cách bên trong nút */
+    border: none; /* Loại bỏ viền */
+    border-radius: 5px; /* Bo tròn các góc của nút */
+    margin: 20px; /* Thêm khoảng cách giữa các nút */
+    cursor: pointer; /* Thay đổi con trỏ thành hình bàn tay khi di chuột qua nút */
+}
+
+.cancel-btn {
+    background-color: #ffffff; /* Màu nền xanh nhạt hơn cho nút thêm vào giỏ hàng */
+    color: rgb(15, 15, 15); /* Màu chữ trắng cho nút */
+}
+
+
+.save-btn {
+    background-color: #64cbef; /* Màu nền cho nút mua ngay */
+    color: white; /* Màu chữ trắng cho nút */
+}

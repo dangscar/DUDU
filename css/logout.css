@@ -1,0 +1,84 @@
+/* logout.css */
+.modal {
+    display: none; /* Ẩn modal khi chưa cần thiết */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Tăng độ mờ cho nền modal */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* Căn giữa modal */
+    padding: 40px; /* Tăng khoảng cách nội dung */
+    border: 1px solid #888;
+    width: 90%; /* Chiều rộng 90% */
+    max-width: 400px; /* Tối đa chiều rộng là 400px */
+    text-align: center;
+    border-radius: 8px; /* Bo góc modal */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng sâu hơn */
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Sắp xếp theo cột */
+    align-items: center; /* Căn giữa các phần tử con */
+}
+
+/* Thêm hình ảnh vào modal */
+.modal-content img {
+    width: 120px; /* Kích thước hình ảnh lớn hơn */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.modal h2 {
+    color: #63CAED; /* Màu xanh dương nhạt cho tiêu đề */
+    font-size: 26px; /* Tăng kích thước chữ tiêu đề */
+    margin-bottom: 15px; /* Khoảng cách giữa tiêu đề và nội dung */
+}
+
+.modal p {
+    color: #000000; /* Màu xám cho đoạn văn */
+    font-size: 20px; /* Tăng kích thước chữ đoạn văn */
+    margin-bottom: 30px; /* Khoảng cách dưới cùng */
+}
+
+/* Thay đổi để hai nút nằm ngang */
+.modal-button {
+    background-color: #EAFFFF; /* Nền xanh dương nhạt */
+    color: #000000; /* Chữ màu đen */
+    border: none;
+    font-weight: bold;
+    padding: 12px 25px; /* Tăng khoảng cách bên trong */
+    margin: 10px; /* Đặt margin cho nút */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Tăng kích thước chữ cho nút */
+    flex: 1; /* Để các nút có chiều rộng bằng nhau */
+    max-width: 150px; /* Đặt chiều rộng tối đa cho nút */
+}
+
+/* Đặt flexbox cho các nút nằm ngang */
+.modal-buttons {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: space-between; /* Căn giữa với khoảng cách đều */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+}
+
+.modal-button:hover {
+    background-color: #64CBEF; /* Nền xanh đậm hơn khi hover */
+}
+
+#cancelLogout, #cancelDelete {
+    background-color: #63CAED; /* Màu xanh cho nút Hủy */
+}
+
+#cancelLogout:hover, #cancelDelete:hover {
+    background-color: #000000; /* Màu xám đậm khi hover */
+    color: #fff;
+}

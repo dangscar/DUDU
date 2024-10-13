@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuDu Store | Trang chủ</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/logout.css">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <img src="../images/phone-icon.png" alt="Phone Icon" class="phone-icon">
+                <span>0923456789</span>
+            </div>
+            <nav>
+                <a href="../html/home.html">TRANG CHỦ</a>
+                <a href="../html/cart.html">GIỎ HÀNG</a>
+                <a href="../html/xemlichsudh.html">ĐƠN MUA</a>
+                <a href="../html/TTcanhan.html">THÔNG TIN CÁ NHÂN</a> 
+                <a href="#" id="logout">ĐĂNG XUẤT</a>
+            </nav>
+        </div>
+        <div class="separator"></div>
+        <div class="header-title">
+            <img src="../images/logo-store2.png" alt="Logo" class="logo">
+            <h1>DuDu Store</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm" class="search-box">
+        </div>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>Danh mục sản phẩm</h2>
+            <ul>
+                <li>Mèo Dudu</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+            </ul>
+        </div>
+        <div class="products">
+            <h3>Hiển thị kết quả:</h3>
+            <div class="sort-filter">
+                <select>
+                    <option value="asc">Lọc theo giá: từ thấp đến cao</option>
+                    <option value="desc">Lọc theo giá: từ cao đến thấp</option>
+                </select>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Sản phẩm sẽ được đổ vào đây từ JavaScript -->
+            </div>
+            <div class="pagination" id="paginationContainer">
+                <!-- Phân trang sẽ được tạo tự động -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-column">
+            <h4>LIÊN HỆ</h4>
+            <p>Số điện thoại: 0923456789</p>
+            <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hòa, Q.Ninh Kiều, TP Cần Thơ</p>
+            <div class="social-icons">
+                <img src="../images/zalo-icon.png" alt="Zalo">
+                <img src="../images/facebook-icon.png" alt="Facebook">
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+            <ul>
+                <li>Hướng dẫn mua hàng</li>
+                <li>Chính sách đổi trả</li>
+                <li>Cách chúng tôi gửi bé yêu đến bạn</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>DUDU STORE</h4>
+            <ul>
+                <li>Về chúng tôi</li>
+                <li>Bảng giá</li>
+                <li>Thông tin sản phẩm</li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Modal Xác Nhận Đăng Xuất -->
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <h2>Đăng xuất</h2>
+        <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+        <div class="modal-buttons">
+            <button id="confirmLogout" class="modal-button">Đăng Xuất</button>
+            <button id="cancelLogout" class="modal-button">Hủy</button>
+        </div>
+    </div>
+</div>
+    <!-- Liên kết file JavaScript -->
+    <script src="../js/products.js"></script>
+    <script src="../js/displayProducts.js"></script> <!-- File để hiển thị sản phẩm -->
+    <script src="../js/logout.js"></script> <!-- Thêm link tới file JavaScript đăng xuất -->
+    <script src="../js/pagination_home.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuDu Store | Trang chủ</title>
+    <link rel="stylesheet" href="../css/test_2.css">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <img src="../images/phone-icon.png" alt="Phone Icon" class="phone-icon">
+                <span>0923456789</span>
+            </div>
+            <nav>
+                <a href="../html/home_customer.html">TRANG CHỦ</a>
+                <a href="../html/cart.html">GIỎ HÀNG</a>
+                <a href="../html/xemlichsudh.html">ĐƠN MUA</a>
+                <a href="../html/TTcanhan.html">THÔNG TIN CÁ NHÂN</a> 
+                <a href="#" id="logout">ĐĂNG XUẤT</a>
+            </nav>
+        </div>
+        <div class="separator"></div>
+        <div class="header-title">
+            <img src="../images/logo-store2.png" alt="Logo" class="logo">
+            <h1>DuDu Store</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm" class="search-box">
+        </div>
+    </header>
+    <section class="slider">
+        <div class="slides">
+            <div class="slide fade">
+                <img src="../images/meo-dudu.png" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="../images/cuu-ragdoll.png" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="../images/gau-miniso.jpg" alt="Slide 3">
+            </div>
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </section>
+    
+    
+    <main>
+        <div class="sidebar">
+            <h2>Danh mục sản phẩm</h2>
+            <ul>
+                <li>Mèo Dudu</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+                <li>Gấu mèo</li>
+            </ul>
+        </div>
+        <div class="products">
+            <h3>Các bé bông của nhà Dudu Store:</h3>
+            <div class="sort-filter">
+                <select>
+                    <option value="asc">Lọc theo giá: từ thấp đến cao</option>
+                    <option value="desc">Lọc theo giá: từ cao đến thấp</option>
+                </select>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Các sản phẩm sẽ được thêm ở đây -->
+            </div>
+            <div class="pagination" id="paginationContainer">
+                <!-- Phân trang sẽ được tạo tự động -->
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>LIÊN HỆ</h4>
+                <p>Số điện thoại: 0923456789</p>
+                <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hòa, Q.Ninh Kiều, TP Cần Thơ</p>
+                <div class="social-icons">
+                    <img src="../images/zalo-icon.png" alt="Zalo">
+                    <img src="../images/facebook-icon.png" alt="Facebook">
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                <ul>
+                    <li>Hướng dẫn mua hàng</li>
+                    <li>Chính sách đổi trả</li>
+                    <li>Cách chúng tôi gửi bé yêu đến bạn</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>DUDU STORE</h4>
+                <ul>
+                    <li>Về chúng tôi</li>
+                    <li>Bảng giá</li>
+                    <li>Thông tin sản phẩm</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Liên kết file JavaScript -->
+    <script src="../js/products.js"></script>
+    <script src="../js/home_pagination.js"></script>
+    <script src="../js/slider.js" defer></script>
+</body>
+</html>

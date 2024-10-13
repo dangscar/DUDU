@@ -1,0 +1,296 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Thêm lớp phủ gradient */
+.header-overlay {
+    height: 30px; /* Chiều cao của lớp phủ gradient */
+    background: linear-gradient(to bottom, rgba(198, 231, 245, 0.8), rgba(233, 251, 255, 0) 100%);
+    width: 100%;
+    position: absolute;
+    top: -30px; /* Đảm bảo lớp phủ nằm ngay dưới header */
+    z-index: 1;
+}
+/* Header */
+header {
+    /*background-image: url('../images/bg_logo2.png'); /* Đường dẫn tới hình nền */
+    background-size: cover; /* Đảm bảo hình nền bao phủ toàn bộ khu vực header */
+    background-position: center; /* Căn giữa hình nền */
+    color: white; /* Màu chữ trắng để hiển thị rõ trên hình nền */
+    padding: 0 0 20px 0; /* Padding chỉ ở dưới cùng để header có không gian hơn */
+    background-color: #C6E7F540; /* Màu nền bổ sung là màu xanh dương nhạt */
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử bên trong header */
+    flex-direction: column; /* Sắp xếp các phần tử bên trong header theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+    /*border-bottom: 3px solid #0cc0df; /* Đường viền dưới top-bar */
+}
+
+.top-bar {
+    width: 100%; /* Chiếm toàn bộ chiều ngang của phần tử chứa */
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử bên trong top-bar */
+    justify-content: space-between; /* Phân bố đều các phần tử, với khoảng cách lớn nhất giữa chúng */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px 20px; /* Thêm khoảng cách 20px ở trái và phải */
+    background-color: rgb(255, 255, 255); /* Nền trắng mờ cho top-bar */
+    box-sizing: border-box; /* Tính toán kích thước bao gồm padding và border */
+    /*border-bottom: 3px solid #003366; /* Đường viền dưới top-bar */
+    margin-bottom: 60px; /* Khoảng cách giữa top-bar và tiêu đề */
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử bên trong contact-info */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px; /* Thêm khoảng cách bên trong là 10px */
+    border: 2px solid #cccccc; /* Thêm đường viền dày 2px màu xám nhạt */
+    border-radius: 50px; /* Bo tròn các góc với bán kính 50px */
+    background-color: #ffffff; /* Màu nền của thẻ là màu trắng */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho thẻ để tạo chiều sâu */
+    width: 180px; /* Đặt chiều rộng cố định là 180px */
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng của phần tử chứa */
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+}
+
+
+.contact-info img {
+    width: 24px; /* Đặt chiều rộng hình ảnh là 24px */
+    margin-right: 10px; /* Thêm khoảng cách 10px bên phải hình ảnh */
+}
+
+.contact-info span {
+    font-size: 16px; /* Thay đổi kích thước văn bản nếu cần */
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các liên kết nằm ngang */
+    justify-content: center; /* Căn giữa các liên kết */
+    align-items: center; /* Căn giữa các liên kết theo chiều dọc */
+    gap: 7px; /* Khoảng cách giữa các liên kết */
+    padding: 10px; /* Thêm khoảng cách bên trong nav nếu cần */
+}
+nav a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex; /* Sử dụng Flexbox để sắp xếp các liên kết ngang */
+    gap: 7px; /* Khoảng cách giữa các liên kết */
+    padding: 10px 15px; /* Thêm khoảng cách xung quanh liên kết */
+    border-radius: 5px; /* Bo tròn các góc */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+}
+/* Hiệu ứng khi di chuột qua */
+nav a:hover {
+    background-color: #79d0f3; /* Màu nền khi di chuột qua */
+    color: white; /* Màu chữ khi di chuột qua */
+}
+/* Hiệu ứng khi liên kết đang được chọn hoặc hoạt động */
+nav a.active {
+    background-color: #333; /* Màu nền khi liên kết đang được chọn */
+    color: white; /* Màu chữ khi liên kết đang được chọn */
+}
+/* Phần tử phân cách */
+.separator {
+    height: 10px; /* Chiều cao của phần tử phân cách */
+    background-color: #ffffff; /* Màu nền của phần tử phân cách */
+}
+
+/* Header title */
+.header-title {
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    text-align: center; /* Căn giữa văn bản */
+    padding: 5px 0; /* Padding trên và dưới */
+}
+
+.header-title .logo {
+    width: 50%; /* Kích thước logo */
+    margin-right: 5px; /* Khoảng cách giữa logo và tiêu đề */
+    height: auto; /* Tỷ lệ hình ảnh */
+    margin-bottom: 0; /* Giảm khoảng cách phía dưới logo */
+    max-width: 100%; /* Đảm bảo kích thước không vượt quá phần tử chứa */
+}
+
+.header-title h1 {
+    margin-top: 5px; /* Tạo một khoảng cách nhỏ nếu cần giữa logo và tiêu đề */
+    font-size: 5.5rem; /* Kích thước chữ tiêu đề */
+    /*color: #63CAED; /* Màu chữ */
+    color: white; /* Màu chữ */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Bóng chữ */
+}
+
+/* Main */
+main {
+    flex-grow: 1; /* Chiếm toàn bộ không gian còn lại */
+    display: flex;
+    justify-content: center; 
+    padding: 20px;
+    gap: 20px;
+    margin-top: 5%;
+    width: 100%; /* Chiếm toàn bộ chiều ngang của container */
+    align-items: center; /* Đảm bảo các phần tử bên trong main cũng được căn giữa */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/bg_logo2.png'); /* Đường dẫn đến hình ảnh */
+    background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ trang */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+
+/* Container tổng để sắp xếp header, main và footer */
+.container {
+    display: flex;
+    flex-direction: column; /* Đảm bảo các phần tử được xếp từ trên xuống */
+    min-height: 100vh; /* Chiều cao tối thiểu là toàn màn hình */
+    justify-content: center; /* Căn giữa dọc theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    justify-content: center;
+}
+
+.form-container {
+    background-color: rgba(233, 251, 255, 0.6); /* Màu nền với độ trong suốt 60% */
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="phone"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6); /* Màu trắng với độ trong suốt 80% */
+    border: 1px solid #D1F2F9;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="phone"]:focus,
+input[type="password"]:focus {
+    border-color: rgba(12, 192, 223, 0.6); /* Đổi màu viền khi focus với độ trong suốt */
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(12, 192, 223, 0.6); /* Màu nền nút với độ trong suốt 80% */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+
+button[type="submit"]:hover {
+    background-color: #FBFCFC; /* Đổi màu nền khi hover */
+    color: hsl(0, 0%, 100%); /* Đổi màu chữ khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
+    background-color: rgba(10, 169, 198, 0.6); /* Độ trong suốt khi hover */
+}
+button[type="submit"]:active {
+    transform: scale(0.98); /* Giảm kích thước nhẹ khi nhấn */
+    box-shadow: none; /* Bỏ đổ bóng khi nhấn */
+}
+p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(85, 85, 85, 0.8); /* Văn bản với độ trong suốt 80% */
+}
+
+a {
+    color: rgba(12, 192, 223, 0.8); /* Link với độ trong suốt 80% */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h4 {
+
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-column p, .footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column ul li {
+    padding: 5px 0;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-right: 10px;
+    margin-top: 20px; /* Khoảng cách giữa các thẻ p và các biểu tượng xã hội */
+}
+
+/* Responsive adjustments cho header, main, footer */
+@media screen and (orientation: portrait) {
+    main {
+        flex-direction: column; /* Chuyển thành dọc trong chế độ dọc */
+        justify-content: center; /* Căn giữa các phần tử bên trong main theo chiều dọc */
+    }
+}
+
+@media screen and (orientation: landscape) {
+    main {
+        flex-direction: row; /* Sắp xếp ngang trong chế độ ngang */
+        justify-content: center; /* Căn giữa các phần tử bên trong main theo chiều ngang */
+        align-items: center; /* Căn giữa theo chiều dọc */
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuDu Store | GIỎ HÀNG</title>
+    <!-- Link tới file CSS chính -->
+    <link rel="stylesheet" href="../css/xemlichsudh.css">
+    <!-- Link đến CSS cho modal logout -->
+    <link rel="stylesheet" href="../css/logout.css">
+    <!-- Thêm favicon vào tab trình duyệt -->
+    <link rel="icon" href="../images/favicon.png" type="image/png"> <!-- Đường dẫn đến favicon -->
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header_name">
+                <img src="../images/logo-store2.png" alt="Logo" class="logo">
+                <span>DuDu Store | Đơn mua</span>
+            </div>
+            <nav>
+                <a href="home_customer.html">TRANG CHỦ</a>
+                <a href="home_customer.html">GIỎ HÀNG</a>         
+                <a href="../html/TTcanhan.html">THÔNG TIN CÁ NHÂN</a>
+                <a href="#" id="logout">ĐĂNG XUẤT</a>
+            </nav>
+        </div>
+        
+
+        <div class="content">
+            <div class="content-item">
+                <button class="view-btn" onclick="location.href='product_details_abc.html'">Xem</button>
+                <img class="content--item-img" src="../images/cho-shiba.png" alt="">
+                <div class="content-item-description">
+                    <span class="item-name">CHÓ SHIBA</span>
+                    <div class="content-item-description-info">
+                        <span class="item-gia">131.000đ</span>
+                        <div class="item-soluong">Số lượng: 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-item">
+                <button class="view-btn" onclick="location.href='product_details_abc.html'">Xem</button>
+                <img class="content--item-img" src="../images/capybara.png" alt="">
+                <div class="content-item-description">
+                    <span class="item-name">CARPYBARA</span>
+                    <div class="content-item-description-info">
+                        <span class="item-gia">131.000đ</span>
+                        <div class="item-soluong">Số lượng: 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-item">
+                <button class="view-btn" onclick="location.href='product_details_abc.html'">Xem</button>
+                <img class="content--item-img" src="../images/meo-dudu.png" alt="">
+                <div class="content-item-description">
+                    <span class="item-name">MÈO DUDU</span>
+                    <div class="content-item-description-info">
+                        <span class="item-gia">131.000đ</span>
+                        <div class="item-soluong">Số lượng: 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-item">
+                <button class="view-btn" onclick="location.href='product_details_abc.html'">Xem</button>
+                <img class="content--item-img" src="../images/gau-miniso.jpg" alt="">
+                <div class="content-item-description">
+                    <span class="item-name">GẤU MINISO</span>
+                    <div class="content-item-description-info">
+                        <span class="item-gia">131.000đ</span>
+                        <div class="item-soluong">Số lượng: 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-item">
+                <button class="view-btn" onclick="location.href='product_details_abc.html'">Xem</button>
+                <img class="content--item-img" src="../images/tho-animo.png" alt="">
+                <div class="content-item-description">
+                    <span class="item-name">THỎ ANIMO</span>
+                    <div class="content-item-description-info">
+                        <span class="item-gia">131.000đ</span>
+                        <div class="item-soluong">Số lượng: 1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>Số điện thoại: 0923456789</p>
+                <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hoà, Q.Ninh Kiều, TP Cần Thơ</p>
+                <div class="social-media">
+                    <img src="../images/zalo-icon.png" alt="Zalo">
+                    <img src="../images/facebook-icon.png" alt="Facebook">
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Hỗ Trợ Khách Hàng</h3>
+                <p>Hướng dẫn mua hàng</p>
+                <p>Chính sách đổi trả</p>
+                <p>Cách chúng tôi gửi bé yêu đến bạn</p>
+            </div>
+            <div class="footer-section">
+                <h3>DuDu Store</h3>
+                <p>Về chúng tôi</p>
+                <p>Bảng giá</p>
+                <p>Thông tin sản phẩm</p>
+            </div>
+        </footer>
+        </div>
+    </div>
+<!-- Modal Xác Nhận Đăng Xuất -->
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <h2>Đăng xuất</h2>
+        <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+        <div class="modal-buttons">
+            <button id="confirmLogout" class="modal-button">Đăng Xuất</button>
+            <button id="cancelLogout" class="modal-button">Hủy</button>
+        </div>
+    </div>
+</div>
+    <!-- Link tới file JavaScript -->
+    <script src="../js/logout.js"></script> <!-- Thêm link tới file JavaScript đăng xuất -->
+</body>
+</html>

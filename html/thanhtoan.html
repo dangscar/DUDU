@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dudu Store | THANH TOÁN</title>
+    <link rel="stylesheet" href="../css/thanhtoan.css">
+    <link rel="stylesheet" href="../css/logout.css">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <div class="header-container">
+                <div class="header_name">
+                    <img src="../images/logo-store2.png" alt="Logo" class="logo">
+                    <span>DuDu Store | THANH TOÁN</span>
+                </div>
+                <nav>
+                    <a href="../html/home.html">TRANG CHỦ</a>
+                    <a href="../html/cart.html">GIỎ HÀNG</a>
+                    <a href="../html/xemlichsudh.html">ĐƠN MUA</a>
+                    <a href="../html/TTcanhan.html">THÔNG TIN CÁ NHÂN</a>
+                    <a href="#" id="logout">ĐĂNG XUẤT</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="app_content">
+        <div class="content">
+            <div id="cartItems" class="content-thanhtoan"></div> <!-- Phần tử hiển thị sản phẩm -->
+            <div class="content-thanhtoan-2">
+                <span class="name">Tổng thanh toán:</span>
+                <span id="totalAmount" class="tongthanhtoan-tien">0đ</span> <!-- Tổng thanh toán -->
+            </div>
+
+            <!-- Các trường nhập thông tin khách hàng -->
+            <form id="paymentForm">
+                <div class="content-thanhtoan1">
+                    <label for="fname" class="ghichu">Họ và tên:</label>
+                    <input type="text" id="fname" name="fname" class="textarea-ghichu" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="content-thanhtoan1">
+                    <label for="fphone" class="ghichu">Số điện thoại:</label>
+                    <input type="tel" id="fphone" name="fphone" class="textarea-ghichu" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="content-thanhtoan1">
+                    <label for="faddress" class="ghichu">Địa chỉ:</label>
+                    <input type="text" id="faddress" name="faddress" class="textarea-ghichu" placeholder="Nhập địa chỉ" required>
+                </div>
+                <div class="content-thanhtoan1">
+                    <label for="fghichu" class="ghichu">Ghi chú trong shop:</label>
+                    <textarea name="fghichu" id="fghichu" class="textarea-ghichu" rows="7" cols="50"></textarea>
+                </div>
+                <div class="btn-action">
+                    <button type="button" class="btn-huy-action">HỦY</button>
+                    <button type="submit" class="btn-dathang-action">ĐẶT HÀNG</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h4>LIÊN HỆ</h4>
+            <p>Số điện thoại: 0923456789</p>
+            <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hòa, Q.Ninh Kiều, TP Cần Thơ</p>
+            <div class="social-icons">
+                <img src="../images/zalo-icon.png" alt="Zalo">
+                <img src="../images/facebook-icon.png" alt="Facebook">
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+            <ul>
+                <li>Hướng dẫn mua hàng</li>
+                <li>Chính sách đổi trả</li>
+                <li>Cách chúng tôi gửi bé yêu đến bạn</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>DUDU STORE</h4>
+            <ul>
+                <li>Về chúng tôi</li>
+                <li>Bảng giá</li>
+                <li>Thông tin sản phẩm</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Modal Xác Nhận Đăng Xuất -->
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <h2>Đăng xuất</h2>
+            <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+            <div class="modal-buttons">
+                <button id="confirmLogout" class="modal-button">Đăng Xuất</button>
+                <button id="cancelLogout" class="modal-button">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link tới file JavaScript -->
+    <script src="../js/logout.js"></script> <!-- Thêm link tới file JavaScript đăng xuất -->
+    <script src="../js/payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="../js/payment.js"></script>
+    <script>
+        // Kiểm tra dữ liệu userInfo trong localStorage
+const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+console.log('Dữ liệu userInfo từ localStorage:', userInfo);
+
+// Kiểm tra dữ liệu giỏ hàng (selectedItems) trong localStorage
+const cart = JSON.parse(localStorage.getItem('selectedItems'));
+console.log('Dữ liệu giỏ hàng từ localStorage:', cart);
+
+    </script>
+</body>
+</html>

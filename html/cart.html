@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuDu Store | GIỎ HÀNG</title>
+    <!-- Link tới file CSS chính -->
+    <link rel="stylesheet" href="../css/cart.css">
+    <!-- Link đến CSS cho modal logout | Mượn của logout-->
+    <link rel="stylesheet" href="../css/logout.css">
+    <!-- Thêm favicon vào tab trình duyệt -->
+    <link rel="icon" href="../images/favicon.png" type="image/png"> <!-- Đường dẫn đến favicon -->
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header_name">
+                <img src="../images/logo-store2.png" alt="Logo" class="logo">
+                <span>DuDu Store | GIỎ HÀNG</span>
+            </div>
+            <nav>
+                <a href="home.html">TRANG CHỦ</a>
+                <a href="../html/xemlichsudh.html">ĐƠN MUA</a>    
+                <a href="../html/TTcanhan.html">THÔNG TIN CÁ NHÂN</a>
+                <a href="#" id="logout">ĐĂNG XUẤT</a>
+            </nav>
+        </div>
+        
+        <div class="content">
+            <!-- Nội dung giỏ hàng sẽ được hiển thị tại đây -->
+        </div>
+        
+        <div class="tongtien">
+            <span class="tongtien-info">Tổng tiền: </span>
+        </div>
+
+        <div class="button-action">
+            <div class="action-delete">
+                <button class="item-delete">
+                    <img class="item-delete-img" src="../images/x.jpg" alt="">
+                </button>
+                <span class="item-delete-name">Xóa tất cả</span>
+            </div>
+            <button class="action-muahang">THANH TOÁN</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h3>Liên Hệ</h3>
+            <p>Số điện thoại: 0923456789</p>
+            <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hoà, Q.Ninh Kiều, TP Cần Thơ</p>
+            <div class="social-media">
+                <img src="../images/zalo-icon.png" alt="Zalo">
+                <img src="../images/facebook-icon.png" alt="Facebook">
+            </div>
+        </div>
+    </footer>
+<!-- Modal Xác Nhận Xóa Sản Phẩm -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <h2>Xóa sản phẩm</h2>
+        <p>Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không?</p>
+        <div class="modal-buttons">
+            <button id="confirmDelete" class="modal-button">Xóa</button>
+            <button id="cancelDelete" class="modal-button">Hủy</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Xác Nhận Đăng Xuất -->
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <h2>Đăng xuất</h2>
+        <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+        <div class="modal-buttons">
+            <button id="confirmLogout" class="modal-button">Đăng Xuất</button>
+            <button id="cancelLogout" class="modal-button">Hủy</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Link tới file JavaScript -->
+    <script src="../js/logout.js"></script> <!-- Thêm link tới file JavaScript đăng xuất -->
+    <script src="../js/cart.js"></script> <!-- Kết nối tới file JavaScript -->
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link tới file CSS chính -->
+    <link rel="stylesheet" href="../css/dsdh.css">
+    <!-- Link đến CSS cho modal logout -->
+    <link rel="stylesheet" href="../css/logout.css">
+    <!-- Thêm favicon vào tab trình duyệt -->
+    <link rel="icon" href="../images/favicon.png" type="image/png"> <!-- Đường dẫn đến favicon -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <img src="../images/phone-icon.png" alt="Phone Icon" class="phone-icon">
+                <span>0923456789</span>
+            </div>
+            <nav>
+                <a href="../html/home_admin.html">TRANG CHỦ</a>
+                <!-- <a href="../html/giohang.html">QUẢN LÝ SẢN PHẨM</a> -->
+                <a href="../html/dsdh.html">DANH SÁCH ĐƠN HÀNG</a>
+                <a href="#" id="logout">ĐĂNG XUẤT</a>
+            </nav>
+        </div>
+        <div class="separator"></div> <!-- Phần tử phân cách -->
+        <div class="header-title">
+            <img src="../images/logo-store2.png" alt="Logo" class="logo">
+            <h1>DuDu Store</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm" class="search-box">
+        </div>
+    </header>
+    <!-- Content -->
+    <div class="app_content">
+        <div class="title">
+            <span class="title_name">Danh sách đơn hàng</span>
+        </div>
+        <div class="content">
+            <div class="content-item">
+                <div class="content-item-thongtin">
+                    <span class="stt">1</span>
+                    <span class="madh">DH001</span>
+                </div>
+                <span class="trangthai">Đang chờ xác nhận</span>
+            </div>
+            <div class="content-item">
+                <div class="content-item-thongtin">
+                    <span class="stt">2</span>
+                    <span class="madh">DH002</span>
+                </div>
+                <span class="trangthai">Đang chờ xác nhận</span>
+            </div>
+            <div class="content-item">
+                <div class="content-item-thongtin">
+                    <span class="stt">3</span>
+                    <span class="madh">DH003</span>
+                </div>
+                <span class="trangthai">Đang chờ xác nhận</span>
+            </div>
+            <div class="content-item">
+                <div class="content-item-thongtin">
+                    <span class="stt">4</span>
+                    <span class="madh">DH004</span>
+                </div>
+                <span class="trangthai">Đang chờ xác nhận</span>
+            </div>
+            <div class="content-item">
+                <div class="content-item-thongtin">
+                    <span class="stt">5</span>
+                    <span class="madh">DH005</span>
+                </div>
+                <span class="trangthai">Đang chờ xác nhận</span>
+            </div>
+            <div class="content-item">
+                <div class="content-item-thongtin">
+                    <span class="stt">6</span>
+                    <span class="madh">DH006</span>
+                </div>
+                <span class="trangthai">Đang chờ xác nhận</span>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h4>LIÊN HỆ</h4>
+            <p>Số điện thoại: 0923456789</p>
+            <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hòa, Q.Ninh Kiều, TP Cần Thơ</p> 
+            <div class="social-icons">
+                <img src="../images/zalo-icon.png" alt="Zalo">
+                <img src="../images/facebook-icon.png" alt="Facebook">
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+            <ul>
+                <li>Hướng dẫn mua hàng</li>
+                <li>Chính sách đổi trả</li>
+                <li>Cách chúng tôi gửi bé yêu đến bạn</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>DUDU STORE</h4>
+            <ul>
+                <li>Về chúng tôi</li>
+                <li>Bảng giá</li>
+                <li>Thông tin sản phẩm</li>
+            </ul>
+        </div>
+    </footer>
+<!-- Modal Xác Nhận Đăng Xuất -->
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <h2>Đăng xuất</h2>
+        <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+        <div class="modal-buttons">
+            <button id="confirmLogout" class="modal-button">Đăng Xuất</button>
+            <button id="cancelLogout" class="modal-button">Hủy</button>
+        </div>
+    </div>
+</div>
+    <!-- Link tới file JavaScript -->
+    <script src="../js/logout.js"></script> <!-- Thêm link tới file JavaScript đăng xuất -->
+</body>
+</html>

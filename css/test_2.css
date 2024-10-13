@@ -1,0 +1,562 @@
+/* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+} */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+header {
+    /*background-image: url('../images/bluebg.png'); /* Đường dẫn tới hình nền */
+    background-size: cover; /* Đảm bảo hình nền bao phủ toàn bộ khu vực header */
+    background-position: center; /* Căn giữa hình nền */
+    flex: 0 0 auto; /* Không cho header co dãn */
+    color: white; /* Màu chữ trắng để hiển thị rõ trên hình nền */
+    padding: 0 0 20px 0; /* Padding chỉ ở dưới cùng để header có không gian hơn */
+    background-color: #87ceeb; /* Màu nền bổ sung là màu xanh dương nhạt */
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử bên trong header */
+    flex-direction: column; /* Sắp xếp các phần tử bên trong header theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.top-bar {
+    width: 100%; /* Chiếm toàn bộ chiều ngang của phần tử chứa */
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử bên trong top-bar */
+    justify-content: space-between; /* Phân bố đều các phần tử, với khoảng cách lớn nhất giữa chúng */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px 20px; /* Thêm khoảng cách 20px ở trái và phải */
+    background-color: rgb(255, 255, 255); /* Nền trắng mờ cho top-bar */
+    box-sizing: border-box; /* Tính toán kích thước bao gồm padding và border */
+    /*border-bottom: 3px solid #0cc0df; /* Đường viền dưới top-bar */
+    margin-bottom: 60px; /* Khoảng cách giữa top-bar và tiêu đề */
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử bên trong contact-info */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px; /* Thêm khoảng cách bên trong là 10px */
+    border: 2px solid #cccccc; /* Thêm đường viền dày 2px màu xám nhạt */
+    border-radius: 50px; /* Bo tròn các góc với bán kính 50px */
+    background-color: #ffffff; /* Màu nền của thẻ là màu trắng */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho thẻ để tạo chiều sâu */
+    width: 180px; /* Đặt chiều rộng cố định là 180px */
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng của phần tử chứa */
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+}
+
+
+.contact-info img {
+    width: 24px; /* Đặt chiều rộng hình ảnh là 24px */
+    margin-right: 10px; /* Thêm khoảng cách 10px bên phải hình ảnh */
+}
+
+.contact-info span {
+    font-size: 16px; /* Thay đổi kích thước văn bản nếu cần */
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các liên kết nằm ngang */
+    justify-content: center; /* Căn giữa các liên kết */
+    align-items: center; /* Căn giữa các liên kết theo chiều dọc */
+    gap: 7px; /* Khoảng cách giữa các liên kết */
+    padding: 10px; /* Thêm khoảng cách bên trong nav nếu cần */
+}
+nav a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex; /* Sử dụng Flexbox để sắp xếp các liên kết ngang */
+    gap: 7px; /* Khoảng cách giữa các liên kết */
+    padding: 10px 15px; /* Thêm khoảng cách xung quanh liên kết */
+    border-radius: 5px; /* Bo tròn các góc */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+}
+/* Hiệu ứng khi di chuột qua */
+nav a:hover {
+    background-color: #79d0f3; /* Màu nền khi di chuột qua */
+    color: white; /* Màu chữ khi di chuột qua */
+}
+/* Hiệu ứng khi liên kết đang được chọn hoặc hoạt động */
+nav a.active {
+    background-color: #333; /* Màu nền khi liên kết đang được chọn */
+    color: white; /* Màu chữ khi liên kết đang được chọn */
+}
+/* Phần tử phân cách */
+.separator {
+    height: 10px; /* Chiều cao của phần tử phân cách */
+    background-color: #ffffff; /* Màu nền của phần tử phân cách */
+}
+
+/* Header title */
+.header-title {
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    text-align: center; /* Căn giữa văn bản */
+    padding: 5px 0; /* Padding trên và dưới */
+}
+
+.header-title .logo {
+    width: 50%; /* Kích thước logo */
+    margin-right: 5px; /* Khoảng cách giữa logo và tiêu đề */
+    height: auto; /* Tỷ lệ hình ảnh */
+    margin-bottom: 0; /* Giảm khoảng cách phía dưới logo */
+    max-width: 100%; /* Đảm bảo kích thước không vượt quá phần tử chứa */
+}
+
+.header-title h1 {
+    margin-top: 5px; /* Tạo một khoảng cách nhỏ nếu cần giữa logo và tiêu đề */
+    font-size: 5.5rem; /* Kích thước chữ tiêu đề */
+    color: white; /* Màu chữ */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Bóng chữ */
+}
+
+/* Thanh tìm kiếm */
+.search-container {
+    text-align: center; /* Căn giữa thanh tìm kiếm */
+    padding: 10px 0;
+}
+
+.search-box {
+    padding: 10px;
+    width: 500px; /* Điều chỉnh chiều dài của thanh tìm kiếm chiếm toàn bộ chiều rộng của phần tử chứa */
+    max-width: 100%; /* Chiều dài tối đa của thanh tìm kiếm */
+    border-radius: 25px;
+    border: 2px solid #cccccc; /* Thay đổi màu viền để rõ ràng hơn */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    box-sizing: border-box; /* Đảm bảo padding và border không làm phần tử vượt ra ngoài kích thước */
+}
+/* Slider */
+.slider {
+    position: relative; /* Để các phần tử con được định vị */
+    max-width: 100%; /* Chiều rộng tối đa của slider */
+    margin: 20px auto; /* Căn giữa slider */
+    overflow: hidden; /* Ẩn phần bên ngoài của slider */
+}
+
+.slides {
+    display: flex; /* Đặt tất cả các slide trong một hàng */
+    transition: transform 0.5s ease-in-out; /* Hiệu ứng chuyển động cho các slide */
+}
+
+.slide {
+    min-width: 100%; /* Chiều rộng mỗi slide */
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
+    display: none; /* Ẩn tất cả các slide ban đầu */
+}
+
+.slide img {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của slide */
+    border-radius: 5px; /* Bo góc cho ảnh */
+}
+
+.prev, .next {
+    position: absolute; /* Định vị các nút điều hướng */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    width: auto; /* Đặt chiều rộng tự động */
+    padding: 16px; /* Padding cho nút */
+    color: white; /* Màu chữ */
+    font-weight: bold; /* Đậm chữ */
+    font-size: 18px; /* Kích thước chữ */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+    cursor: pointer; /* Hiển thị con trỏ chuột */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền khi hover */
+}
+
+.prev {
+    left: 10px; /* Vị trí bên trái */
+}
+
+.next {
+    right: 10px; /* Vị trí bên phải */
+}
+
+
+
+/* Main */
+/* CSS cho thân trang */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Đảm bảo chiều cao tối thiểu của body */
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+    background-color: #E9FBFF;
+    /*margin: 0px 64px; /* Thêm thụt lề trái và phải 64px */
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    background-color: #E9FBFF;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+    margin-left: 64px; /* Thụt vào 64px từ lề trái */
+    border-radius: 25px; 
+    
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 10px;
+    /*border: 2px solid #64CBEF; */
+    border-radius: 50px; /* Bo góc tiêu đề */
+    background-color: #9bddf5; /* Màu nền cho tiêu đề */
+    margin: 0 0 10px 0;
+    text-align: center; /* Căn giữa nội dung của tiêu đề */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    
+}
+
+.sidebar li {
+    padding: 10px 0; /* Thêm padding để tạo không gian xung quanh nội dung */
+    cursor: pointer;
+    border: 2px solid #ffffff; /* Khung bo góc */
+    border-radius: 50px; /* Bo góc */
+    margin: 5px 0; /* Khoảng cách giữa các phần tử */
+    background-color: #ffffff; /* Màu nền của từng mục */
+    border-bottom: 1px solid #ddd; /* Đường phân cách giữa các mục */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng khi di chuột qua */
+    display: inline-block; /* Đặt các mục thành inline-block để căn giữa */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của sidebar */
+    box-sizing: border-box; /* Bao gồm padding và border vào chiều rộng */
+}
+/* Hiệu ứng khi di chuột qua từng mục */
+.sidebar li:hover {
+    background-color: #cdf0f8; /* Màu nền khi di chuột qua */
+    border-color: #87ceeb; /* Màu khung khi di chuột qua */
+}
+
+.sort-filter {
+    margin: 20px 0; /* Khoảng cách trên và dưới cho phần lọc */
+    text-align: right; /* Căn phải*/
+    margin-right: 84px;
+}
+
+.sort-filter select {
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 2px solid #9BDDF5; /* Viền cho select */
+    border-radius: 5px; /* Bo góc cho viền */
+    background-color: #ffffff; /* Màu nền trắng */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển đổi màu viền */
+}
+
+/* Hiệu ứng hover cho select */
+.sort-filter select:hover {
+    border-color: #0056b3; /* Thay đổi màu viền khi hover */
+}
+/* Products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-right: 64px; /* Thụt vào 64px từ lề phải */
+}
+
+.product-item {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+}
+.product-link {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: inherit; /* Kế thừa màu sắc từ phần tử cha */
+}
+
+.product-link:hover {
+    text-decoration: none; /* Tùy chọn: thêm hiệu ứng gạch chân khi hover */
+}
+.product-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.text-info {
+    flex-grow: 1; /* Chiếm không gian còn lại */
+    text-align: left
+}
+
+.product-info p,
+.product-info span {
+    margin: 0; /* Xóa khoảng cách mặc định */
+    text-align: left; /* Căn trái nội dung */
+    font-weight: bold;
+}
+.product-item button {
+    padding: 4px 25px;
+    background-color: #87ceeb;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: right;
+}
+.text-info button {
+    margin-top: 10px; /* Khoảng cách giữa giá và nút "Mua" */
+    margin-left: 20px; /* Khoảng cách bên trái để tạo không gian giữa giá và nút "Mua" */
+}
+/* Container cho nút phân trang */
+#paginationContainer {
+    display: flex;
+    justify-content: center; /* Căn giữa các nút */
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+/* Nút trang */
+#paginationContainer a {
+    text-decoration: none; /* Xóa gạch chân */
+    color: #64CBEF; /* Màu chữ */
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    border: 1px solid #64CBEF; /* Đường viền */
+    border-radius: 5px; /* Bo góc */
+    margin: 0 5px; /* Khoảng cách giữa các nút */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+/* Hiệu ứng khi hover */
+#paginationContainer a:hover {
+    background-color: #64CBEF; /* Màu nền khi hover */
+    color: white; /* Màu chữ khi hover */
+}
+
+/* Nút trang đang hoạt động */
+#paginationContainer a.active {
+    background-color: #007BFF; /* Màu nền cho nút đang chọn */
+    color: white; /* Màu chữ cho nút đang chọn */
+    border: 1px solid #007BFF; /* Đường viền cho nút đang chọn */
+}
+
+/* Nút quay lại và chuyển tiếp */
+#paginationContainer a {
+    font-weight: bold; /* Đậm cho các nút trước/sau */
+}
+
+
+
+.footer {
+  flex: 0 0 auto;
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 25px 164px;
+  flex-wrap: wrap;
+  
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+
+}
+
+
+.footer-row .footer-col h4 {
+  color: #2C3E50;;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 10px 0;
+  color: #2C3E50;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #ffffff ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+.footer ul, li, p {
+    font-size: 1.1rem
+}
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+.social-icons img {
+    width: 30px;
+    margin-right: 10px;
+    margin-top: 10px; /* Khoảng cách giữa các thẻ p và các biểu tượng xã hội */
+}
+
+.logo img {
+    width: 100px;
+}
+.logo {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc nếu cần */
+    flex-direction: column;
+    text-align: center; /* Căn giữa văn bản */
+}
+.logo h4 {
+    margin: 0; /* Loại bỏ khoảng cách mặc định của h4 */
+}
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    
+    flex-wrap: wrap;
+    padding: 25px 32px;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center; /* Căn giữa nội dung */
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+
+/* Thêm @media để điều chỉnh cho thiết bị nhỏ hơn */
+@media screen and (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Tối đa 150px mỗi cột cho thiết bị nhỏ */
+    }
+}
+/* Thiết kế cho chế độ ngang (Landscape) */
+@media screen and (orientation: landscape) {
+    .header-content {
+        text-align: left;
+    }
+
+    .header-content input[type="text"] {
+        width: 60%; /* Tăng chiều dài trong chế độ ngang */
+        padding: 10px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 25%;
+        margin-right: 20px;
+    }
+
+    .products {
+        width: 75%;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Tự động điều chỉnh */
+        gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    }
+}

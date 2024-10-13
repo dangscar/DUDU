@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuDu Store | QUẢN LÍ SẢN PHẨM</title>
+    <!-- Link tới file CSS chính -->
+    <link rel="stylesheet" href="../css/Quanlisp.css">
+    <!-- Thêm favicon vào tab trình duyệt -->
+    <link rel="icon" href="../images/favicon.png" type="image/png"> <!-- Đường dẫn đến favicon -->
+    <!-- Link đến CSS cho modal logout -->
+    <link rel="stylesheet" href="../css/logout.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <img src="../images/phone-icon.png" alt="Phone Icon" class="phone-icon"><!--icon phone-->
+                <span>0923456789</span>
+            </div>
+            <nav>
+                <a href="../html/home_admin.html">TRANG CHỦ</a>
+                <a href="../html/dsdh.html">DANH SÁCH ĐƠN HÀNG</a>
+                <a href="#" id="logout">ĐĂNG XUẤT</a>
+            </nav>
+        </div>
+        <div class="separator"></div> <!-- Phần tử phân cách -->
+        <div class="header-title">
+            <img src="../images/logo-store2.png" alt="Logo" class="logo">
+            <h1>DuDu Store</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm" class="search-box">
+        </div>
+    </header>
+
+    <div class="product-info">
+        <div class="product-image">
+            <img src="../images/meo-dudu.png" alt="Mèo Dudu">
+            <div class="upload-container">
+                <button class="upload-btn">Tải lên hình ảnh</button>
+            </div>
+        </div>
+        <div class="product-details">
+            <p><strong>Mã sản phẩm:</strong> <span id="product-id-text">SP0001</span>
+                <a href="#" class="edit-link" style="display:none;" onclick="editField('product-id-text', 'product-id-input')">Thay đổi</a>
+                <input type="text" id="product-id-input" style="display:none;" value="SP0001" onblur="saveField('product-id-text', 'product-id-input')">
+            </p>
+
+            <p><strong>Tên sản phẩm:</strong> <span id="product-name-text">Mèo Dudu</span>
+                <a href="#" class="edit-link" style="display:none;" onclick="editField('product-name-text', 'product-name-input')">Thay đổi</a>
+                <input type="text" id="product-name-input" style="display:none;" value="Mèo Dudu" onblur="saveField('product-name-text', 'product-name-input')">
+            </p>
+
+            <p><strong>Giá bán:</strong> <span id="product-price-text">249.000</span>
+                <a href="#" class="edit-link" style="display:none;" onclick="editField('product-price-text', 'product-price-input')">Thay đổi</a>
+                <input type="text" id="product-price-input" style="display:none;" value="249.000" onblur="saveField('product-price-text', 'product-price-input')">
+            </p>
+
+            <p><strong>Phân loại:</strong> <span id="product-category-text">Gòn bi</span>
+                <a href="#" class="edit-link" style="display:none;" onclick="editField('product-category-text', 'product-category-input')">Thay đổi</a>
+                <input type="text" id="product-category-input" style="display:none;" value="Gòn bi" onblur="saveField('product-category-text', 'product-category-input')">
+            </p>
+
+            <p><strong>Mô tả:</strong> <span id="product-description-text">Bé mèo Dudu trông thật dễ thương...</span>
+                <a href="#" class="edit-link" style="display:none;" onclick="editField('product-description-text', 'product-description-input')">Thay đổi</a>
+                <textarea id="product-description-input" style="display:none;" onblur="saveField('product-description-text', 'product-description-input')">Bé mèo Dudu trông thật dễ thương...</textarea>
+            </p>
+
+            <p><strong>Tình trạng hàng:</strong> <span id="product-status-text">Còn hàng</span>
+                <a href="#" class="edit-link" style="display:none;" onclick="editField('product-status-text', 'product-status-input')">Thay đổi</a>
+                <input type="text" id="product-status-input" style="display:none;" value="Còn hàng" onblur="saveField('product-status-text', 'product-status-input')">
+            </p>
+        </div>
+    </div>
+
+    <!-- Nút trong action-buttons -->
+    <div class="action-buttons">
+        <button class="cancel-btn">Huỷ</button>
+        <button class="update-btn" onclick="showEditLinks()">Cập nhật</button> <!-- Nút Cập nhật đã có sẵn -->
+        <button class="save-btn">Lưu mới</button>
+        <button class="delete-btn">Xoá</button>
+    </div>
+
+    <script src="../js/Quanlisp.js"></script> <!-- Liên kết file JavaScript -->
+
+        <footer>
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>Số điện thoại: 0923456789</p>
+                <p>Địa chỉ: 123, Nguyễn Văn Cừ, P.An Hoà, Q.Ninh Kiều, TP Cần Thơ</p>
+                <div class="social-media">
+                    <img src="../images/zalo-icon.png" alt="Zalo">
+                    <img src="../images/facebook-icon.png" alt="Facebook">
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Hỗ Trợ Khách Hàng</h3>
+                <p>Hướng dẫn mua hàng</p>
+                <p>Chính sách đổi trả</p>
+                <p>Cách chúng tôi gửi bé yêu đến bạn</p>
+            </div>
+            <div class="footer-section">
+                <h3>DuDu Store</h3>
+                <p>Về chúng tôi</p>
+                <p>Bảng giá</p>
+                <p>Thông tin sản phẩm</p>
+            </div>
+        </footer>
+    </div>
+<!-- Modal Xác Nhận Đăng Xuất -->
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <h2>Đăng xuất</h2>
+        <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+        <div class="modal-buttons">
+            <button id="confirmLogout" class="modal-button">Đăng Xuất</button>
+            <button id="cancelLogout" class="modal-button">Hủy</button>
+        </div>
+    </div>
+</div>
+    <!-- Link tới file JavaScript -->
+    <script src="../js/logout.js"></script> <!-- Thêm link tới file JavaScript đăng xuất -->
+</body>
+
+</html>
